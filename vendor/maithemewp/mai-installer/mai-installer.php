@@ -9,15 +9,34 @@
  * @license   GPL-2.0-or-later
  */
 
+// Needed in theme's functions.php file.
+add_filter( 'pand_theme_loader', '__return_true' );
+
+add_action( 'after_setup_theme', 'mai_plugin_dependencies' );
 /**
- * Install and active dependencies.
+ * Description of expected behavior.
  *
  * @since 1.0.0
  *
  * @return void
  */
-add_filter( 'pand_theme_loader', '__return_true' );
-WP_Dependency_Installer::instance()->run( __DIR__ );
+function mai_plugin_dependencies() {
+
+	// Set plugin dependencies.
+	$config = apply_filters( 'mai_plugin_dependencies', [
+		[
+			'name'     => 'Mai Engine',
+			'host'     => 'github',
+			'slug'     => 'mai-engine/mai-engine.php',
+			'uri'      => 'maithemewp/mai-engine',
+			'optional' => false,
+		],
+	] );
+
+	// Install and active dependencies.
+	\WP_Dependency_Installer::instance()->load_hooks();
+	\WP_Dependency_Installer::instance()->register( $config );
+}
 
 add_action( 'admin_init', 'mai_theme_redirect', 100 );
 /**
