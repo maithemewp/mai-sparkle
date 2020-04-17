@@ -29,6 +29,7 @@ function mai_plugin_dependencies() {
 			'host'     => 'github',
 			'slug'     => 'mai-engine/mai-engine.php',
 			'uri'      => 'maithemewp/mai-engine',
+			'branch'   => 'master',
 			'optional' => false,
 		],
 	] );
