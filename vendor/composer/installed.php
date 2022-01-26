@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ac09a2a66712ac8f3a77720e22e2aa3ad24e7490',
+    'reference' => '003266692edd9b48311ea8cf179d2d8aeea7bf58',
     'name' => 'maithemewp/mai-sparkle',
   ),
   'versions' => 
@@ -26,7 +26,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '1b637076d114af7762855493b9bac009a6272d5c',
+      'reference' => '44561c1f7bb4bb0022787bb44974b573b2bca72d',
     ),
     'maithemewp/mai-sparkle' => 
     array (
@@ -35,7 +35,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ac09a2a66712ac8f3a77720e22e2aa3ad24e7490',
+      'reference' => '003266692edd9b48311ea8cf179d2d8aeea7bf58',
     ),
   ),
 );
